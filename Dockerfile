@@ -1,4 +1,4 @@
-FROM node:14.17.4-alpine
+FROM node:14.19.1-alpine
 RUN apk --no-cache add \
     gettext \
     bash
