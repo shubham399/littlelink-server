@@ -12,6 +12,7 @@ var env = {
     NAME: process.env.NAME,
     BIO: process.env.BIO,
     GITHUB: process.env.GITHUB,
+    WEBSITE: process.env.WEBSITE,
     TWITTER: process.env.TWITTER,
     MASTODON: process.env.MASTODON,
     MICRO_BLOG: process.env.MICRO_BLOG,
@@ -107,6 +108,13 @@ function useEnv(document) {
         bioEl.remove()
     }
 
+    var linkEl = document.getElementById('link');
+    if (env.WEBSITE) {
+        linkEl.href = env.WEBSITE;
+    } else {
+        linkEl.nextElementSibling.remove()
+        linkEl.remove()
+    }
     var githubEl = document.getElementById('github');
     if (env.GITHUB) {
         githubEl.href = env.GITHUB;
