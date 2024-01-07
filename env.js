@@ -45,6 +45,7 @@ var env = {
     SKOOB: process.env.SKOOB,
     LETTERBOXD: process.env.LETTERBOXD,
     FOOTER: process.env.FOOTER,
+    CAL_URL: process.env.CAL_URL,
 
 }
 
@@ -254,6 +255,13 @@ function useEnv(document) {
     } else {
         tiktokEl.nextElementSibling.remove()
         tiktokEl.remove()
+    }
+    var calEl = document.getElementById('cal');
+    if (env.CAL_URL) {
+        calEl.href = env.CAL_URL;
+    } else {
+        calEl.nextElementSibling.remove()
+        calEl.remove()
     }
 
     var emailEl = document.getElementById('email');
