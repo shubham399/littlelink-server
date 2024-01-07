@@ -34,6 +34,7 @@ jobs:
         AVATAR_2X_URL: ${{ secrets.AVATAR_2X_URL }}
         NAME: ${{ secrets.NAME }}
         BIO: ${{ secrets.BIO }}
+        CAL_URL: ${{ secrets.CAL_URL }}
         GITHUB: ${{ secrets.GITHUB }}
         TWITTER: ${{ secrets.TWITTER }}
         MASTODON: ${{ secrets.MASTODON }}
