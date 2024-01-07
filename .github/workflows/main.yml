@@ -68,6 +68,7 @@ jobs:
         GOODREADS: ${{ secrets.GOODREADS }}
         SKOOB: ${{ secrets.SKOOB }}
         LETTERBOXD: ${{ secrets.LETTERBOXD }}
+        WEBSITE: ${{ secrets.WEBSITE }}
         FOOTER: ${{ secrets.FOOTER }}
     - name: Commit changes
       uses: EndBug/add-and-commit@v5
