@@ -12,7 +12,8 @@ var env = {
     NAME: process.env.NAME,
     BIO: process.env.BIO,
     GITHUB: process.env.GITHUB,
-    WEBSITE: process.env.WEBSITE,
+    WEBSITE: process.env.WEBSITE, 
+    WEBSITE_ALT: process.env.WEBSITE_ALT,
     TWITTER: process.env.TWITTER,
     MASTODON: process.env.MASTODON,
     MICRO_BLOG: process.env.MICRO_BLOG,
@@ -114,6 +115,13 @@ function useEnv(document) {
     } else {
         linkEl.nextElementSibling.remove()
         linkEl.remove()
+    }
+    var linkAltEl = document.getElementById('link-alt');
+    if (env.WEBSITE_ALT) {
+        linkAltEl.href = env.WEBSITE_ALT;
+    } else {
+        linkAltEl.nextElementSibling.remove()
+        linkAltEl.remove()
     }
     var githubEl = document.getElementById('github');
     if (env.GITHUB) {
