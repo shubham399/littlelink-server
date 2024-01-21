@@ -69,6 +69,7 @@ jobs:
         SKOOB: ${{ secrets.SKOOB }}
         LETTERBOXD: ${{ secrets.LETTERBOXD }}
         WEBSITE: ${{ secrets.WEBSITE }}
+        WEBSITE_ALT: ${{ secrets.WEBSITE_ALT }}
         FOOTER: ${{ secrets.FOOTER }}
     - name: Commit changes
       uses: EndBug/add-and-commit@v5
