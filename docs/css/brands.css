@@ -262,6 +262,13 @@ button:hover,
 .button.button-tiktok:focus {
   filter: brightness(90%) }
 
+.button.button-cal {
+  color: #FFFFFF;
+  background-color: #1a1b1b }
+.button.button-cal:hover,
+.button.button-cal:focus {
+  filter: brightness(90%) }
+
 /* Tumblr */
 .button.button-tumblr {
   color: #FFFFFF;

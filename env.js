@@ -12,6 +12,8 @@ var env = {
     NAME: process.env.NAME,
     BIO: process.env.BIO,
     GITHUB: process.env.GITHUB,
+    WEBSITE: process.env.WEBSITE, 
+    WEBSITE_ALT: process.env.WEBSITE_ALT,
     TWITTER: process.env.TWITTER,
     MASTODON: process.env.MASTODON,
     MICRO_BLOG: process.env.MICRO_BLOG,
@@ -45,6 +47,7 @@ var env = {
     SKOOB: process.env.SKOOB,
     LETTERBOXD: process.env.LETTERBOXD,
     FOOTER: process.env.FOOTER,
+    CAL_URL: process.env.CAL_URL,
 
 }
 
@@ -106,6 +109,20 @@ function useEnv(document) {
         bioEl.remove()
     }
 
+    var linkEl = document.getElementById('link');
+    if (env.WEBSITE) {
+        linkEl.href = env.WEBSITE;
+    } else {
+        linkEl.nextElementSibling.remove()
+        linkEl.remove()
+    }
+    var linkAltEl = document.getElementById('link-alt');
+    if (env.WEBSITE_ALT) {
+        linkAltEl.href = env.WEBSITE_ALT;
+    } else {
+        linkAltEl.nextElementSibling.remove()
+        linkAltEl.remove()
+    }
     var githubEl = document.getElementById('github');
     if (env.GITHUB) {
         githubEl.href = env.GITHUB;
@@ -254,6 +271,13 @@ function useEnv(document) {
     } else {
         tiktokEl.nextElementSibling.remove()
         tiktokEl.remove()
+    }
+    var calEl = document.getElementById('cal');
+    if (env.CAL_URL) {
+        calEl.href = env.CAL_URL;
+    } else {
+        calEl.nextElementSibling.remove()
+        calEl.remove()
     }
 
     var emailEl = document.getElementById('email');

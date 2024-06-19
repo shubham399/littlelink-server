@@ -34,6 +34,7 @@ jobs:
         AVATAR_2X_URL: ${{ secrets.AVATAR_2X_URL }}
         NAME: ${{ secrets.NAME }}
         BIO: ${{ secrets.BIO }}
+        CAL_URL: ${{ secrets.CAL_URL }}
         GITHUB: ${{ secrets.GITHUB }}
         TWITTER: ${{ secrets.TWITTER }}
         MASTODON: ${{ secrets.MASTODON }}
@@ -67,6 +68,8 @@ jobs:
         GOODREADS: ${{ secrets.GOODREADS }}
         SKOOB: ${{ secrets.SKOOB }}
         LETTERBOXD: ${{ secrets.LETTERBOXD }}
+        WEBSITE: ${{ secrets.WEBSITE }}
+        WEBSITE_ALT: ${{ secrets.WEBSITE_ALT }}
         FOOTER: ${{ secrets.FOOTER }}
     - name: Commit changes
       uses: EndBug/add-and-commit@v5
