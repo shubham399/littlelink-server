@@ -12,8 +12,9 @@ var env = {
     NAME: process.env.NAME,
     BIO: process.env.BIO,
     GITHUB: process.env.GITHUB,
-    WEBSITE: process.env.WEBSITE, 
+    WEBSITE: process.env.WEBSITE,
     WEBSITE_ALT: process.env.WEBSITE_ALT,
+    WEBSITE_ALT_TEXT: process.env.WEBSITE_ALT_TEXT,
     TWITTER: process.env.TWITTER,
     MASTODON: process.env.MASTODON,
     MICRO_BLOG: process.env.MICRO_BLOG,
@@ -119,6 +120,9 @@ function useEnv(document) {
     var linkAltEl = document.getElementById('link-alt');
     if (env.WEBSITE_ALT) {
         linkAltEl.href = env.WEBSITE_ALT;
+        if (env.WEBSITE_ALT_TEXT) {
+            linkAltEl.textContent = env.WEBSITE_ALT_TEXT;
+        }
     } else {
         linkAltEl.nextElementSibling.remove()
         linkAltEl.remove()
